@@ -3,7 +3,7 @@
     <img alt="Hamburguer" title="Hamburguer" src="https://i.ytimg.com/vi/uWF3YFe-v_0/hqdefault.jpg" width="100px" />
 </h1>
 
-# Criando um Menú estilo "Hamburguer"
+# Criando um Menu estilo "Hamburguer"
 
 Este exercício, simples, foi feito devido a uma necessidade para um projeto. Espero que gostem!
 
@@ -18,7 +18,7 @@ Sempre há espaço para melhorar! Envie-nos comentários e sugestões!
 
 
 # **Vídeos de Referência**
-<a href="https://www.youtube.com/watch?v=SRUuQnwrC1U" target="_blank"><img alt="Developer" title="Developer" src="https://www.htmlecsspro.com/uploads/images/2018/03/efeito-menu-hamburger-com-css3-1522117178.png" height="200px" width="400px"/></a>| <a href="https://www.youtube.com/watch?v=IGz4BI-aO_8" target="_blank"><img alt="Developer" title="Developer" src="https://willianjusten.com.br/assets/img/hamburguer-icon-cover.png" height="200px" width="400px"/></a>
+<a href="https://www.youtube.com/watch?v=SRUuQnwrC1U" target="_blank"><img alt="Developer" title="Developer" src="https://www.htmlecsspro.com/uploads/images/2018/03/efeito-menu-hamburger-com-css3-1522117178.png" height="200px" width="400px"/></a> <a href="https://www.youtube.com/watch?v=IGz4BI-aO_8" target="_blank"><img alt="Developer" title="Developer" src="https://willianjusten.com.br/assets/img/hamburguer-icon-cover.png" height="200px" width="400px"/></a>
 
 
 # **Antes de começar**
@@ -28,7 +28,7 @@ Sempre há espaço para melhorar! Envie-nos comentários e sugestões!
 |Link da referência deste treino: &nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp; [HTMLCSSPRO](https://www.htmlecsspro.com/artigo/efeito-menu-hamburger-com-css3)|
 
 # **Tecnologias**
-<img alt="HTML" title="HTML" src="https://beststickers.net/image/cache/catalog/products/stickers/java-html-css-vinyl-stickers-decal-2800x1600.jpg" height="300px"/>
+<img alt="tecnologias" title="tecnologias" src="https://beststickers.net/image/cache/catalog/products/stickers/java-html-css-vinyl-stickers-decal-2800x1600.jpg" height="300px"/>
 
 
 # **Outros estilos/exemplos de Menus**
