@@ -1,0 +1,155 @@
+/* Menu Hamburguer (Para fim de responsividade mobile) */
+
+body
+{
+    background: #DEB887;
+}
+
+/* 1o passo => Criamos uma classe ( .container ) que envolverá todo o nosso conteúdo. Somente para centralizamos na tela do browser. */
+.container
+{
+position:relative;
+widows: 60px;
+margin: 120px 120px;
+}
+
+/* 2o passo => Criamos uma classe ( .btn ) que será o nosso botão. */
+.btn
+{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 30px;
+    cursor: pointer;
+}
+
+/* 3o passo => Criamos uma classe ( .btn-left ) e definimos a largura ( width ) com 30px, ou seja a metade da nossa classe ( .btn ). */
+.btn-left
+{
+    background-color: #333;
+    position: absolute;
+    height: 8px;
+    width: 30px;
+    top: 30px;
+    left: 0px;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+/* 4o passo => Criamos uma classe ( .btn-right ) e definimos a largura ( width ) com 30px, ou seja a metade da nossa classe ( .btn ) e deslocamos ela para a direita no ( left ) de 30px para ocupar o espaço faltante. */
+.btn-right
+{
+    background-color: #333;
+    position: absolute;
+    height: 8px;
+    width: 30px;
+    top: 30px;
+    left: 30px;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+/* 5o passo => Criamos uma classe com as mesmas características da classe ( .btn-left ) utilizando o Pseudo Elementos ( :before ) e definimos o ( top: -20px ), isso vai deixar nossa classe 20px acima da classe ( .btn-left ) formando uma barra de com a largura de 30px. */
+.btn-left:before
+{
+    background-color: #333;
+    position: absolute;
+    height: 8px;
+    width: 30px;
+    content: "";
+    top: -20px;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+/* 6o passo => Criamos uma classe com as mesmas características da classe ( .btn-left ) utilizando o Pseudo Elementos ( :after ) e definimos o ( top: 20px ), isso vai deixar nossa classe 20px abaixo da classe ( .btn-left ) formando uma barra de com a largura de 30px. */
+.btn-left:after
+{
+    background-color: #333;
+    position: absolute;
+    height: 8px;
+    width: 30px;
+    content: "";
+    top: 20px;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;  
+}
+/* 7o passo => Criamos uma classe com as mesmas características da classe ( .btn-right ) utilizando o Pseudo Elementos ( :before ) e definimos o ( top: -20px ), isso vai deixar nossa classe 20px acima da classe ( .btn-right ) formando uma barra de com a largura de 30px. */
+.btn-right:before
+{
+    background-color: #333;
+    position: absolute;
+    height: 8px;
+    width: 30px;
+    content: "";
+    top: -20px;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+/* 8o passo => Criamos uma classe com as mesmas características da classe ( .btn-right ) utilizando o Pseudo Elementos ( :after ) e definimos o ( top: 20px ), isso vai deixar nossa classe 20px abaixo da classe ( .btn-right ) formando uma barra de com a largura de 30px. */
+.btn-right:after
+{
+    background-color: #333;
+    position: absolute;
+    height: 8px;
+    width: 30px;
+    content: "";
+    top: 20px;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;  
+}
+
+/* 9o passo => Perceba que agora temos uma classe chamada de ( .active ) pois ela será adicionado ao nosso HTML via jQuery ( veremos mais a frente ), assim que essa classe é inserida, ela vai invocar os comandos acima e tirar a cor de fundo da classe ( .btn-left ), deixando a mesma invisível na tela. */
+.active .btn-left
+{
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    background: transparent;
+}
+
+/* 10o passo => Aqui vamos atacar a nossa classe criada com o Pseudo Elementos ( :before ) com a propriedade ( transform: ) do CSS3.
+rotateZ(45deg) – Define uma rotação 3D ao longo do eixo Z;
+scaleX(1.4) – Define uma transformação de escala, dando um valor para o eixo X;
+translate(4px, -4px) – Define uma tradução em 2D, vai posicionar a classe nas posições ( top e left ). */
+
+.active .btn-left:before
+{
+    -webkit-transform: rotateZ(45deg) ScaleX(1.4) translate(4x, 4x);
+    transform: rotateZ(45deg) scaleX(1.4) translate(4px, 4px);
+}
+
+/* 11o passo => Atacamos agora a nossa classe criada com o Pseudo Elementos ( :after ) com a propriedade ( transform: ) do CSS3.
+Perceba que mudamos apenas dois valores ( rotateZ(-45deg) ) e ( translate(4px, -4px) ), agora precisamos colocar valores negativos para termos um efeito ao contrário. */
+.active .btn-left:after
+{
+    -webkit-transform: rotateZ(-45deg) ScaleX(1.4) translate(4x, -4x);
+    transform: rotateZ(-45deg) scaleX(1.4) translate(4px, -4px);
+}
+
+/* 12o passo => Nessa parte faremos o mesmo processo do 9° Passo, vamos invocar os comandos acima e tirar a cor de fundo da classe ( .btn-right ), deixando a mesma invisível na tela. */
+.active .btn-right
+{
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    background: transparent;
+}
+
+/* 13o passo => Vamos atacar o Pseudo Elementos ( :before ) para fazer os efeitos. */
+.active .btn-right:before
+{
+    -webkit-transform: rotateZ(-45deg) ScaleX(1.4) translate(-4x, 4x);
+    transform: rotateZ(-45deg) scaleX(1.4) translate(-4px, 4px);
+}
+/* 14o passo => Vamos atacar o Pseudo Elementos ( :after ), mudamos apenas os velores de ( rotateZ ) e ( translate ). */
+.active .btn-right:after
+{
+    -webkit-transform: rotateZ(45deg) ScaleX(1.4) translate(-4x, -4x);
+    transform: rotateZ(45deg) scaleX(1.4) translate(-4px, -4px);
+}
+
+/* 15o passo => fazer o HTML
+16o passo => fazer o JQUERY */
+
+

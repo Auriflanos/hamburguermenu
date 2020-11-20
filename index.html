@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    
+    <head>
+        
+        <title>Menu Hamburguer com CSS</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="btn">
+            
+                <div class="btn-left"></div>
+                <div class="btn-right"></div>
+
+            </div>   
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+        </script>
+        <script>
+        $('.btn').click(function()// Aqui diz que, quando tem clique, irá fazer algo
+        {
+            $(this).toggleClass('active'); //o "algo" nada mais é que ativar ou não a alteração da classe para ativo (inclusão de active) na classe
+        });
+
+        </script>
+
+    </body>
+
+</html>
